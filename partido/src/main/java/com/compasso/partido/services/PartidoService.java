@@ -7,7 +7,8 @@ import org.springframework.data.domain.Page;
 import java.awt.print.Pageable;
 
 public interface PartidoService {
-    PartidoDTO save(PartidoForm partido);
+
+    PartidoDTO save(PartidoForm partidoForm);
 
     Page<PartidoDTO> listPartido(Pageable pagina);
 
