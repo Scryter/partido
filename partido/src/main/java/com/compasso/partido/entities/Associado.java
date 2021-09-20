@@ -5,10 +5,7 @@ import com.compasso.partido.categorias.CargoPolitico;
 import com.compasso.partido.categorias.Sexo;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
@@ -21,9 +18,9 @@ public class Associado
     private Long id;
 
     private String nome;
-
+    @Enumerated(EnumType.STRING)
     private CargoPolitico cargoPolitico;//private Enum<CargoPolitico> cargoPolitico;
-
+    @Enumerated(EnumType.STRING)
     private Sexo sexo;
 
     private Date data_nascimento;

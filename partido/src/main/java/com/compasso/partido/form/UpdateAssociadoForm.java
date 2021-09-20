@@ -13,9 +13,8 @@ import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
-public class AssociadoForm {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) @NotNull
+public class UpdateAssociadoForm {
+    @Id//@GeneratedValue(strategy = GenerationType.IDENTITY) @NotNull
     private Long id;
     @NotNull @NotEmpty
     private String nome;

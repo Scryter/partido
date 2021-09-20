@@ -3,14 +3,11 @@ package com.compasso.partido.entities;
 import com.compasso.partido.categorias.Ideologia;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
-@Entity
+/*@Table(name = "partido")/*/@Entity
 public class Partido
 {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +16,7 @@ public class Partido
     private String nome;
 
     private String sigla;
-
+    @Enumerated(EnumType.STRING)
     private Ideologia ideologia;
 
     private Date data_fundacao;

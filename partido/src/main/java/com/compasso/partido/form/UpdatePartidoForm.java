@@ -1,16 +1,18 @@
 package com.compasso.partido.form;
-
 import com.compasso.partido.categorias.Ideologia;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
+import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
-public class PartidoForm
+public class UpdatePartidoForm
 {
+    @Id
+    private  long id;
     @NotNull
     @NotEmpty
     private String nome;
